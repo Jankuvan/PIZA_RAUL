@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Tulivery S.A.C">
+    <meta name="theme-color" content="#BD1218">
+    <title>Pizza Raúl | Categorias</title>
+    <meta name="csrf-token" content="Nm5dj0d0kHjNyutinSPPFhm7PdWd0WjozT72WUY5">
+    <link rel="icon" href="https://www.pizzaraul.com/images/icons/LOGO-PR-16.png" type="image/png">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+    <link rel="stylesheet" href="https://www.pizzaraul.com/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.pizzaraul.com/css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.pizzaraul.com/css/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.min.css">
+    <link rel="stylesheet" href="https://www.pizzaraul.com/css/fotorama.css" >
+    <link rel="stylesheet" href="https://www.pizzaraul.com/css/intlTelInput.min.css">
+    <link rel="stylesheet" href="https://www.pizzaraul.com/css/main.css">
+    <link rel="manifest" href="https://www.pizzaraul.com/manifest.json">
+
+    
+    <link rel="stylesheet" href="https://www.pizzaraul.com/css/minimal.css">
+    <link rel="stylesheet" href="https://www.pizzaraul.com/css/responsive.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  </head>
+  <body>
+      
+<link rel="stylesheet" href="https://www.pizzaraul.com/css/categories.css">
+
+<style>
+
+    .cardProduct{
+        right: 0;
+    }
+
+    .cardProduct.removed{
+        right: calc(100% + 30px) !important;
+        -webkit-transition: all 800ms ease-in-out;
+           -moz-transition: all 800ms ease-in-out;
+            -ms-transition: all 800ms ease-in-out;
+             -o-transition: all 800ms ease-in-out;
+                transition: all 800ms ease-in-out;
+    }
+</style>
+
+<div class="main cart content-page" style="height: 100%; background-color: #f9fafc;">
+    <div class="row mx-0" style="height: 100%">
+        <div class="col-12 col-md-12 col-lg-9 px-3 pb-3 bgContent">
+            <div class="row barWhite sticky-top">
+                <div class="col-3 col-md-2">
+                    <a href="https://www.pizzaraul.com/home"> <img class="logo-whiteBar" src="https://www.pizzaraul.com/images/store/img-logo-red.png" alt="">
+                    </a>
+                </div>
+                <div class="col-9 col-md-10 form-inline">
+                    <div class="col-10 col-md-10 form-inline from-search mt-md-0">
+                        <img src="https://www.pizzaraul.com/images/icons/search.svg" alt="">
+
+                        
+
+                        <input style="display: none" type="text" name="fakeusernameremembered" />
+                        <input style="display: none" type="password" name="fakepasswordremembered" />
+
+                        
+
+
+                        <input class="form-control gradientSearch mr-sm-2 spi-category" name="spi-category" type="text" placeholder="Búsqueda por nombre" aria-label="Search" autocomplete="chrome-off">
+                        <button class="hb-clear">
+                            <span class="material-icons-round">cancel</span>
+                        </button>
+
+                    </div>
+
+                    <div class="col-2 col-md-2 iconBar tablet-car" style="display: block;">
+                        <a href="#">
+                            <img class="svgheader-pizza" src="https://www.pizzaraul.com/images/icons/pizza-dark.svg" alt="">
+                            <span class="counter"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row contentWhite sticky-top">
+                <div class="col-12 subutem">
+                    
+                    <div class="categorias" id="categorias">
+                        <div class="swiper-wrapper">
+                                                            <div class="swiper-slide">
+                                    <a data-id="1" class="categoryItem  active ">Promociones</a>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <a data-id="2" class="categoryItem ">Pizzas</a>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <a data-id="3" class="categoryItem ">Pastas</a>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <a data-id="4" class="categoryItem ">Complementos</a>
+                                </div>
+                                                    </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" id="pg-category">
+
+            <div class="row mx-0 product-list"></div>
+
+            <button type="button" class="btn btn-red col-12 d-flex justify-content-between align-items-center ctgm-car">
+                <div class="align">
+                    <img class="svgheader-pizza" src="https://www.pizzaraul.com/images/icons/pizza-dark.svg" alt="pizza-ico">
+                    <span class="counter"></span>
+                </div>
+                <div class="align">Ver carrito de compra</div>
+                <div class="align">
+                    <strong>
+                        <div class="float-right pt-1 main-total"></div>
+                    </strong>
+                </div>
+            </button>
+
+        </div>
+
+        <div class="col-md-3 bgSidebar pt-0 mb-0 pb-0">
+    <div class="row px-3 pt-0 mt-0 ">
+
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <h3 class="px-2" style="padding: 12px .5rem 11px .5rem !important;">Mi Pedido</h3>
+
+            <button class="btn btn-default close">
+                <span class="material-icons-round">close</span>
+            </button>
+
+            <div class="iconBar px-2">
+                <a href="#">
+                    <img class="svgheader-pizza" src="https://www.pizzaraul.com/images/icons/pizza-dark.svg" alt="">
+                    <span class="counter"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="directionCart px-2 w-100"></div>
+
+        <div class="scrollCart mt-3 px-3"></div>
+
+        <div class="fotterCart col-md-12">
+            
+                                            <h6 class="px-0">&nbsp;<b class="float-right"></b></h6>
+                <h6 class="px-0">Precio <b class="float-right main-total">S/. 00.00</b></h6>
+                                        <button class="btn btn-yellow2 w-100 text-center upp endorder" type="button" disabled>Finalizar pedido</button>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+<!-- MODAL PRODUCT DETAIL-->
+<div class="modal fade infoProducto" id="modal-product-details" tabindex="-1" role="dialog" aria-labelledby="infoProductoLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <input type="hidden" class="mdps-id" value="">
+            <input type="hidden" class="mdps-cat" value="">
+            <input type="hidden" class="mdps-price" value="">
+            <input type="hidden" class="mdps-base" value="">
+            <input type="hidden" class="mdps-form" value="">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="right: 10px;top: 5px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body modal-center">
+                <div class="row p-1">
+                    <div class="col-md-5 info-detail">
+                        <div class="typeList content px-0">
+                            <div class="card modal-card">
+                                <div class="card-body px-0">
+                                    <h4 class="mdp-title"></h4>
+                                    <p class="mdp-detail"></p>
+                                </div>
+                                <div class="image-responsive product-image mdp-image"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 px-3 pt-2 mb-5 mdps-extras"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="cardProduct d-flex justify-content-between  align-items-center pt-1 pb-0 mb-3 px-3">
+                    <div class="custom-qty mt-2 mr-3">
+                        <button class="reduced items mdmp-button" type="button"><img src="https://www.pizzaraul.com/images/icons/minus.svg" alt=""> </button>
+                        <input type="text" class="input-text qty mdps-number" value="0"  id="mdps-number" name="mdps-number" disabled>
+                        <button class="increase items mdpp-button" type="button"><img src="https://www.pizzaraul.com/images/icons/plus.svg" alt=""> </button>
+                    </div>
+                    <button class="btn btn-yellow2 float-right text-center upp addproduct" type="button" disabled>
+                        <span class="mdp-price"></span> Añadir al pedido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL DIRECCION-->
+
+
+<!-- MODAL planet coint payment -->
+<div class="modal fade" id="modal-payplanet" tabindex="-1" role="dialog" aria-labelledby="planetcoin" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="col-md-12 info-detail text-left px-0">
+
+                      <div class="awesomeRaulForm detail col-12 planetform1 pt-4 px-3">
+                          <h4>Ingresa tu usuario PlanetCoin</h4>
+                          <div class="row px-0 pt-1">
+                          <div class="inputlight mt-1 col-12">
+                              <label>Usuario</label>
+                              <input type="text" class="planetusr"required placeholder="Ingrese su usuario"/>
+                          </div>
+
+                          <div class="inputlight mt-4 col-12">
+                              <label>Pin</label>
+                              <input pattern="[0-9]*" inputmode="numeric" type="text" class="planetpss" required placeholder="Ingrese su pin" style="-webkit-text-security: disc;"/>
+                          </div>
+
+                          <div class="mt-4 col-12 d-flex justify-content-between">
+                              <button class="mt-3 mb-3 btn btn-dark text-center upp" data-dismiss="modal" type="button">Cancelar</button>
+                              <button class="mt-3 mb-3 btn btn-yellow2 text-center upp planetlgn" type="button">Continuar</button>
+                          </div>
+                          </div>
+                      </div>
+
+                      <div class="awesomeRaulForm detail col-12 pt-4 px-3 planetform2 hide"></div>
+
+                      
+
+                      <div class="planetform3 hide" style="text-align: center;">
+                          <img src="https://www.pizzaraul.com/images/store/img-pizza.png" alt="">
+                          <div class="info-detail ">
+                            <h3><strong>Gracias por tu compra</strong></h3>
+                            <p class="info-small-text">Indicaciones sobre el pedido</p>
+                            <a class="btn btn-yellow2 mt-5" href="https://www.pizzaraul.com/home"> Ir a home</a>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="codigo-recaudacion" tabindex="-1" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+          <img src="https://www.pizzaraul.com/images/store/img-pizza.png" alt="">
+          <div class="info-detail ">
+            <h4><strong>Gracias por tu compra</strong></h4>
+            
+            <div class="ordertext"></div>
+            
+            <div class="d-flex justify-content-between">
+              <a class="btn btn-dark mt-5 redirect" href=""><strong>SEGUIR MI PEDIDO</strong></a>
+              <a class="btn btn-yellow2 mt-5" href="https://www.pizzaraul.com/home">VOLVER A HOME</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL  confirm message-->
+<div class="modal fade" id="modal-confirm" tabindex="-1" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+          <img src="https://www.pizzaraul.com/images/store/img-pizza.png" alt="">
+          <div class="info-detail">
+            <h3><strong class="mdc-title"></strong></h3>
+            <p class="info-small-text mdc-message" style="line-height: 22px;"></p>
+            <button class="btn btn-dark mt-5"><strong>Cancelar</strong></button>
+            <button class="btn btn-yellow2 mt-5">Registrarme</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-completephone" tabindex="-1" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: max-content;">
+    <div class="modal-content">
+      <button type="button" class="close clearphone" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="modal-body">
+        <div class="info-detail">
+          <fieldset>
+            <span>Por favor, ingrese su teléfono de contacto</span>
+            <div class='phoneadd-form'>
+              <div class='complete-phone form-inline' style="width: 350px;">
+                <input type='text' class='addphoneorder col-9'>
+                <button class='btn btn-red btnr-validate col-3 mt-0'>Validar</button>
+              </div>
+              <div class="complete-otp"></div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL  add phone number and email if not has-->
+<div class="modal fade" id="modal-completedata" tabindex="-1" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: max-content;">
+    <div class="modal-content">
+      <button type="button" class="close clearphone" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="modal-body">
+        <div class="info-detail"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL  close store-->
+<div class="modal fade" id="close-store" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="info-detail">
+          <h1 class="mt-3">Oops...</h1>
+          <h3>Lo sentimos, la tienda esta cerrada</h3>
+          <span></span>
+          <div class="img-borderless"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="pause-store" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+          <div class="info-detail">
+              <h3></h3>
+              <div class="d-flex justify-content-center">
+                  <button type="button" class="btn btn-yellow2 mt-3" class="close" data-dismiss="modal" aria-label="Close">CERRAR</button>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+<script src="https://npmcdn.com/leaflet-geometryutil"></script>
+<script src="https://www.pizzaraul.com/scripts/material.js"></script>
+
+<div class="modal fade" id="state-order" tabindex="-1" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document" style="max-width: 400px !important;">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="https://www.pizzaraul.com/images/store/img-pizza.png" alt="">
+          <div class="info-detail">
+            <h3><strong></strong></h3>
+            <h4><strong></strong></h4>
+                              <div class="d-flex justify-content-between">
+                  <button class="btn btn-yellow2" data-dismiss="modal"><strong>CERRAR</strong></button>
+                  <a class="btn btn-dark redirect" style="color: white;"><strong>SEGUIR MI PEDIDO</strong></a>
+                </div>
+                        </div>
+        </div>
+      </div>
+    </div>
+</div><div class="modal fade password" id="modal-password" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="form1 hide">
+                <div class="mdl-title">
+                    <h1>Cambio de contraseña</h1>
+                    <span>Porfavor, ingrese su nueva contraseña</span>
+                </div>
+                <div class="mt-3">
+                    <input type="text" class="form-control" id="pss-input" name="pss-input" required placeholder="Nueva contraseña">
+                </div>
+                <div class="form-horizontal mt-3">
+                    <div class="form-label form-inline">
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 px-0">
+                            <div class="rqs disabled mx-1" id="rqs1" disabled>8 caracteres mínimo</div>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 px-0">
+                            <div class="rqs disabled mx-1" id="rqs2" disabled>Al menos una letra</div>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 px-0">
+                            <div class="rqs disabled mx-1" id="rqs3" disabled>Al menos un número</div>
+                        </div>
+                    </div>
+                    <div class="mdl-footer mt-3">
+                        <button type="button" class="btn btn-red rps-change" disabled>Cambiar</button>
+                    </div>                     
+                </div>
+            </div>
+            <div class="form2 hide">
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<script src="https://www.pizzaraul.com/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
+<script src="https://www.pizzaraul.com/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.pizzaraul.com/js/slick.js" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+<script src="https://www.pizzaraul.com/js/pouchdb.min.js"></script>
+<script src="https://www.pizzaraul.com/js/pouchdb.memory.js"></script>
+<script src="https://www.pizzaraul.com/js/venobox.min.js"></script>
+<script src="https://www.pizzaraul.com/js/axios.min.js"></script>
+<script src="https://www.pizzaraul.com/js/currency.min.js"></script>
+<script src="https://www.pizzaraul.com/js/jquery.mask.min.js"></script>
+<script src="https://www.pizzaraul.com/js/intlTelInput-jquery.min.js"></script>
+<script src="https://www.pizzaraul.com/js/jquery.disableautofill.min.js"></script>
+<script src="https://www.pizzaraul.com/js/autoComplete.min.js"></script>
+
+<script src="https://www.pizzaraul.com/scripts/animation.js"></script>
+<script src="https://www.pizzaraul.com/scripts/password.js"></script>
+<script src="https://www.pizzaraul.com/scripts/common.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtvZnNDK3rEEoirtsGd-kf731JJ9VzERA&libraries=places,geometry"></script>
+
+
+<style>
+@media  only screen and (max-width: 600px){
+    .bgSidebar.show .scrollCart {
+        height: calc(100vh - 422px);
+    }
+}
+</style>
+
+
+
+<script src="https://www.pizzaraul.com/scripts/boxundefined.js"></script>
+
+<script src="https://www.pizzaraul.com/scripts/flags.js"></script>
+<script src="https://www.pizzaraul.com/scripts/products.js?v=2023010519"></script>
+<script src="https://www.pizzaraul.com/scripts/slider.js"></script>
+
+
+      <div class="loading-backdrop">
+    <canvas id="pizza"></canvas>
+</div>      <script src="https://www.pizzaraul.com/scripts/loading.js"></script>
+  </body>
+</html>

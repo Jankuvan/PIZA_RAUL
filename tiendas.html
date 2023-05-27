@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Tulivery S.A.C">
+    <meta name="theme-color" content="#BD1218">
+    <title>Pizza Raúl | Home</title>
+    <meta name="csrf-token" content="Nm5dj0d0kHjNyutinSPPFhm7PdWd0WjozT72WUY5">
+    <link rel="icon" href="https://www.pizzaraul.com/images/icons/LOGO-PR-16.png" type="image/png">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+    <link rel="stylesheet" href="https://www.pizzaraul.com/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.pizzaraul.com/css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.pizzaraul.com/css/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.min.css">
+    <link rel="stylesheet" href="https://www.pizzaraul.com/css/fotorama.css" >
+    <link rel="stylesheet" href="https://www.pizzaraul.com/css/intlTelInput.min.css">
+    <link rel="stylesheet" href="https://www.pizzaraul.com/css/main.css">
+    <link rel="manifest" href="https://www.pizzaraul.com/manifest.json">
+
+             <link rel="stylesheet" href="https://www.pizzaraul.com/css/mainv2.css">
+         <link rel="stylesheet" href="https://www.pizzaraul.com/css/single.css">
+         <style>
+          body {
+              background-color: #f6f6f6;
+          }
+         </style>
+
+    
+    <link rel="stylesheet" href="https://www.pizzaraul.com/css/minimal.css">
+    <link rel="stylesheet" href="https://www.pizzaraul.com/css/responsive.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  </head>
+  <body>
+      
+<nav class="navbar navbar-expand-md navbar-red fixed-top">
+    <div class="d-flex justify-content-between align-items-center w-100 smPosition">
+
+        <div class="logoMobile">
+            <div class="d-flex">
+
+                <a class="navbar-brand hidden-900" href="https://www.pizzaraul.com/home"><img class="logo" src="https://www.pizzaraul.com/images/logo.png" alt=""></a>
+
+                
+            </div>
+        </div>
+
+        <div class="form-inline d-flex justify-content-end align-items-center">
+            <div class="menusub">
+                
+
+                <div class="iconBar mr-4">
+                    <a href="https://www.pizzaraul.com/categorias">
+                        <img class="svgheader-pizza" src="https://www.pizzaraul.com/images/icons/pizza-white.svg" alt="">
+                        <span class="counter bag"></span>
+                    </a>
+                </div>
+                
+                
+                                <div class="mx-4" style="padding: 15px 0;">
+                    <a class="btn btn-yellow2 text-center upp" type="button" href="https://www.pizzaraul.com/login"
+                        style="margin: 0;"> Entrar</a>
+                </div>
+                            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .store{
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .store:hover{
+        transition: 0.3s;
+        background-color: #bd121817;
+    }
+    .gm-style .gm-style-iw-c {
+        background-color: #bd1218;
+        width: 250px;
+        border-radius: 20px;
+        font-weight: 500;
+    }
+    .gm-style .gm-style-iw-d,
+    .gm-style .gm-style-iw-d::-webkit-scrollbar-track,
+    .gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece{
+        background-color: #bd1218;
+    }
+
+    .gm-style .gm-style-iw-t::after {
+        background: linear-gradient(45deg,rgb(189 18 24) 50%,rgba(255,255,255,0) 51%,rgba(255,255,255,0) 100%);
+    }
+
+    
+    .mapboxgl-popup-content {
+        color: white;
+        width: 100%;
+    }
+</style>
+
+<div class="main">
+    <div class="row mx-0 px-0">
+
+        <div class="tittle-terms mt-2 mb-2 col-12 pt-5">
+          <h1><strong>Tiendas</strong></h1>
+          <h4>Encuentra tu Pizza Raúl más cercano</h4>
+        </div>
+        <div class="col-12 col-md-10 mx-auto mt-2 pt-2">
+          <div class="row mx-0 px-0 containerMobile justify-content-between align-items-center">
+            <div class="col-md-6 col-12 sectionElm scrollMap">
+ 
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>Lima</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="5">
+                                <p>Pizza Raúl Bocanegra : Avenida bocanegra 0</p>
+                            </div>
+                                                    <div class="store p-1" data-id="15">
+                                <p>Pizza Raúl Colonial 2 : Avenida mariscal oscar raimundo benavides 3096</p>
+                            </div>
+                                                    <div class="store p-1" data-id="17">
+                                <p>Pizza Raúl Dominicos : Avenida los dominicos 0</p>
+                            </div>
+                                                    <div class="store p-1" data-id="52">
+                                <p>Pizza Raúl Universitaria : Avenida universitaria 1095</p>
+                            </div>
+                                                    <div class="store p-1" data-id="56">
+                                <p>Pizza Raúl Mall plaza : Avenida mariscal oscar raimundo benavides 3866</p>
+                            </div>
+                                                    <div class="store p-1" data-id="57">
+                                <p>Pizza Raúl Alcazar : Av alcÁzar 963</p>
+                            </div>
+                                                    <div class="store p-1" data-id="67">
+                                <p>Pizza Raúl Navarrete : Avenida rivera navarrete 2709</p>
+                            </div>
+                                                    <div class="store p-1" data-id="70">
+                                <p>Pizza Raúl Ventanilla : A. a. caceres 17</p>
+                            </div>
+                                            </div>
+
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>Ate</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="55">
+                                <p>Pizza Raúl Angamos : Av. angamos este 1047</p>
+                            </div>
+                                            </div>
+
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>Comas</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="3">
+                                <p>Pizza Raúl Belaunde : Av. belaunde oeste 844</p>
+                            </div>
+                                                    <div class="store p-1" data-id="33">
+                                <p>Pizza Raúl Mega80 : Avenida tomas valle 635</p>
+                            </div>
+                                            </div>
+
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>El Agustino</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="71">
+                                <p>Pizza Raúl El agustino : Avenida Áncash 0</p>
+                            </div>
+                                            </div>
+
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>Jesus Maria</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="18">
+                                <p>Pizza Raúl Garzon : Avenida general garzón 1585</p>
+                            </div>
+                                            </div>
+
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>La Molina</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="68">
+                                <p>Pizza Raúl Molicentro : Avenida ricardo elías aparicio 141</p>
+                            </div>
+                                            </div>
+
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>Lince</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="29">
+                                <p>Pizza Raúl Lince : Jirón josé de la torre ugarte 357</p>
+                            </div>
+                                            </div>
+
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>Los Olivos</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="36">
+                                <p>Pizza Raúl Naranjal : Avenida próceres 4952</p>
+                            </div>
+                                            </div>
+
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>Lurigancho</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="8">
+                                <p>Pizza Raúl Calle 13 : Av. 13 de enero 1863</p>
+                            </div>
+                                                    <div class="store p-1" data-id="23">
+                                <p>Pizza Raúl Jardines : Avenida las flores de primavera 1401</p>
+                            </div>
+                                            </div>
+
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>San Juan de Miraflores</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="39">
+                                <p>Pizza Raúl Pedro miota : Avenida ramon vargas machuca 122</p>
+                            </div>
+                                            </div>
+
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>San Martin de Porres</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="51">
+                                <p>Pizza Raúl Tomas valle : Avenida tomas valle 0</p>
+                            </div>
+                                                    <div class="store p-1" data-id="53">
+                                <p>Pizza Raúl Vipol : Calle sin nombre 2265</p>
+                            </div>
+                                            </div>
+
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>San Miguel</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="30">
+                                <p>Pizza Raúl Maranga : Avenida elmer faucett 409</p>
+                            </div>
+                                            </div>
+
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>Santiago de Surco</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="4">
+                                <p>Pizza Raúl Benavides : Av. alfredo benavides 4340</p>
+                            </div>
+                                                    <div class="store p-1" data-id="46">
+                                <p>Pizza Raúl Salamanca : Avenida circunvalación 2331</p>
+                            </div>
+                                                    <div class="store p-1" data-id="72">
+                                <p>Pizza Raúl Encalada : Avenida la encalada 911</p>
+                            </div>
+                                            </div>
+
+                                    <div class="d-flex justify-content-start">
+                        <img src="images/icons/flag_outline.png" alt="">
+                        <h3>Surquillo</h3>
+                    </div>
+
+                    <div class="sedeSection mb-3">
+                                                    <div class="store p-1" data-id="1">
+                                <p>Pizza Raúl Primavera : Avenida angamos 2506</p>
+                            </div>
+                                            </div>
+
+                                
+            </div>
+            <div class="col-md-6 col-12 text-mobile-text ">
+                <div class="map-address" id="map-address" style="height: 100vh;border-radius: 10px;">
+                </div> 
+            </div>
+           
+          </div>
+        </div>
+
+      </div>
+</div>
+
+<footer class="footer-area footermt">
+    <!-- Footer Top Area -->
+    <div class="footer-top-area pt-4">
+        <div class="container">
+            <div class="row widgets footer-widgets pt-4 m-0">
+
+                <!-- Single Widget -->
+                <div class="col-lg-3 col-md-12 col-sm-12 col-12 footer-logo">
+                    <img class="logoFooter" src="images/store/img-logo.png" alt="">
+                </div>
+                <!--// Single Widget -->
+
+
+                <!-- Single Widget -->
+                <div class="col-lg-3 col-md-12 col-sm-12 col-12 d-flex align-items-center justify-content-center">
+                    <div class="single-widget widget-quicklinks">
+                        <ul class="m-0">
+                            <li><a href="https://www.pizzaraul.com/politicas-privacidad">Políticas de privacidad</a></li>
+                            <li><a href="https://www.pizzaraul.com/terminos-condiciones">Términos y condiciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--// Single Widget -->
+
+                <!-- Single Widget -->
+                <div class="col-lg-3 col-md-12 col-sm-12 col-12 d-flex align-items-center justify-content-center">
+                    <div class="single-widget widget-quicklinks">
+                        <ul class="m-0">
+                            <li><a href=https://www.pizzaraul.com/libro-reclamaciones>Libro de reclamaciones</a></li>
+                            <li><a href=https://www.pizzaraul.com/tiendas>Nuestras tiendas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--// Single Widget -->
+
+                <!-- Single Widget -->
+                <div class="col-lg-3 col-md-12 col-sm-12 col-12 d-flex align-items-center footer-redes">
+                    <div class="footer-social-links single-widget widget-contact">
+                        <ul class="d-flex justify-content-center m-0">
+                            <li><a href="https://www.facebook.com/PizzaRaulOficial/" target="_blank"><img src="images/icons/facebook.svg" alt=""></a></li>
+                            <li><a href="https://www.instagram.com/pizzaraul_oficial/?hl=es-la" target="_blank"><img src="images/icons/instagram.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--// Single Widget -->
+
+            </div>
+        </div>
+    </div>
+    <!--// Footer Top Area -->
+
+    <!-- Footer Copyright Area -->
+    <div class="footer-copyright-area section-padding-top-xs">
+        <div class="container">
+            <div class="row mx-0">
+                <div class="col-lg-6 px-0">
+                    <p class="text-left">Copyright ©2023 Todos los derechos reservados</p>
+                </div>
+                <div class="col-lg-6">
+                    <p class="text-right">Desarrollado por Tulivery</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// Footer Copyright Area -->
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+<script src="https://npmcdn.com/leaflet-geometryutil"></script>
+<script src="https://www.pizzaraul.com/scripts/material.js"></script>
+
+<div class="modal fade" id="state-order" tabindex="-1" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document" style="max-width: 400px !important;">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="https://www.pizzaraul.com/images/store/img-pizza.png" alt="">
+          <div class="info-detail">
+            <h3><strong></strong></h3>
+            <h4><strong></strong></h4>
+                              <div class="d-flex justify-content-between">
+                  <button class="btn btn-yellow2" data-dismiss="modal"><strong>CERRAR</strong></button>
+                  <a class="btn btn-dark redirect" style="color: white;"><strong>SEGUIR MI PEDIDO</strong></a>
+                </div>
+                        </div>
+        </div>
+      </div>
+    </div>
+</div><div class="modal fade password" id="modal-password" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="form1 hide">
+                <div class="mdl-title">
+                    <h1>Cambio de contraseña</h1>
+                    <span>Porfavor, ingrese su nueva contraseña</span>
+                </div>
+                <div class="mt-3">
+                    <input type="text" class="form-control" id="pss-input" name="pss-input" required placeholder="Nueva contraseña">
+                </div>
+                <div class="form-horizontal mt-3">
+                    <div class="form-label form-inline">
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 px-0">
+                            <div class="rqs disabled mx-1" id="rqs1" disabled>8 caracteres mínimo</div>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 px-0">
+                            <div class="rqs disabled mx-1" id="rqs2" disabled>Al menos una letra</div>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 px-0">
+                            <div class="rqs disabled mx-1" id="rqs3" disabled>Al menos un número</div>
+                        </div>
+                    </div>
+                    <div class="mdl-footer mt-3">
+                        <button type="button" class="btn btn-red rps-change" disabled>Cambiar</button>
+                    </div>                     
+                </div>
+            </div>
+            <div class="form2 hide">
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<script src="https://www.pizzaraul.com/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
+<script src="https://www.pizzaraul.com/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.pizzaraul.com/js/slick.js" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+<script src="https://www.pizzaraul.com/js/pouchdb.min.js"></script>
+<script src="https://www.pizzaraul.com/js/pouchdb.memory.js"></script>
+<script src="https://www.pizzaraul.com/js/venobox.min.js"></script>
+<script src="https://www.pizzaraul.com/js/axios.min.js"></script>
+<script src="https://www.pizzaraul.com/js/currency.min.js"></script>
+<script src="https://www.pizzaraul.com/js/jquery.mask.min.js"></script>
+<script src="https://www.pizzaraul.com/js/intlTelInput-jquery.min.js"></script>
+<script src="https://www.pizzaraul.com/js/jquery.disableautofill.min.js"></script>
+<script src="https://www.pizzaraul.com/js/autoComplete.min.js"></script>
+
+<script src="https://www.pizzaraul.com/scripts/animation.js"></script>
+<script src="https://www.pizzaraul.com/scripts/password.js"></script>
+<script src="https://www.pizzaraul.com/scripts/common.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtvZnNDK3rEEoirtsGd-kf731JJ9VzERA&libraries=places,geometry"></script>
+
+
+<script src="https://www.pizzaraul.com/scripts/stores.js"></script>
+
+
+      <div class="loading-backdrop">
+    <canvas id="pizza"></canvas>
+</div>      <script src="https://www.pizzaraul.com/scripts/loading.js"></script>
+  </body>
+</html>
